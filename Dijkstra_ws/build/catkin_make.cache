@@ -1,2 +1,2 @@
 kobuki_description:path_planning_intro/pp_msgs:path_planning_intro/srv_client_plugin:path_planning_intro/unit2_pp:turtlebot_description
--DCATKIN_DEVEL_PREFIX=/home/nagesh/Dijkstra_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nagesh/Dijkstra_ws/install -G Unix Makefiles
+-DCATKIN_DEVEL_PREFIX=/home/nagesh/ROS_ALGOS/Dijkstra_ws/devel -DCMAKE_INSTALL_PREFIX=/home/nagesh/ROS_ALGOS/Dijkstra_ws/install -G Unix Makefiles
