@@ -1,0 +1,14 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/home/nagesh/Dijkstra_ws/devel/lib/python2.7/dist-packages",
+        "/home/nagesh/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.analysis.extraPaths": [
+        "/home/nagesh/Dijkstra_ws/devel/lib/python2.7/dist-packages",
+        "/home/nagesh/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "ros.distro": "melodic",
+    "C_Cpp.errorSquiggles": "Disabled"
+}
