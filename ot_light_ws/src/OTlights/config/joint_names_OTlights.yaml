@@ -1,0 +1,36 @@
+OTlights:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  p1_base_position_controller:
+    type: effort_controllers/JointPositionController
+    joint: p1_base
+    pid: {p: 1.0, i: 0.0, d: 0.0}
+            
+
+  p3_fx1_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: p3_fx1
+      pid: {p: 1.0, i: 0.0, d: 0.0}
+              
+
+  p5_fx2_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: p5_fx2
+      pid: {p: 1.0, i: 0.0, d: 0.0}
+              
+
+  pi_g_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: pi_g
+      pid: {p: 1.0, i: 0.0, d: 0.0}
+              
+
+  l_g_position_controller:
+      type: effort_controllers/JointPositionController
+      joint: l_g
+      pid: {p: 1.0, i: 0.0, d: 0.0}
+            
+
+  

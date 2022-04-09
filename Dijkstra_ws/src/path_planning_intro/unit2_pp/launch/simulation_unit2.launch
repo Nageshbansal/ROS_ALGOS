@@ -4,14 +4,14 @@
 
 <env name="GAZEBO_MODEL_PATH" value="$(find unit2_pp)/models/" />
 
-<arg name="use_gui" default="true"/>
+<arg name="use_gui" default="True"/>
 
 <!-- Set name of the world to be launched, configure as required -->
 <!-- <arg name="world_name" default="worlds/empty.world"/> -->
-<arg name="world_name" default="$(find unit2_pp)/worlds/unit2.world"/>
+<!-- <arg name="world_name" default="$(find unit2_pp)/worlds/unit2.world"/> -->
 
 <include file="$(find gazebo_ros)/launch/empty_world.launch">
-    <arg name="world_name" value="$(arg world_name)"/> 
+    <arg name="world_name" value="$(find unit2_pp)/worlds/unit2.world"/> 
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="$(arg use_gui)"/>

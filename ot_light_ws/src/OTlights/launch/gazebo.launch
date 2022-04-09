@@ -1,0 +1,31 @@
+<launch>
+
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" />
+  
+
+  <param
+    name="robot_description"
+    textfile="$(find OTlights)/urdf/OTlights.urdf" />
+  <!-- <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_footprint base_link 100" /> -->
+  
+  <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <rosparam file="$(find OTlights)/config/joint_names_OTlights.yaml" command="load"/>
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find OTlights)/urdf/OTlights.urdf -urdf -model OTlights"
+    output="screen" />
+  
+  <node name="controller_spawner"  pkg="controller_manager" type="spawner" ns="/OTlights" respawn="false" output="screen"  args="p1_base_position_controller joint_state_controller p3_fx1_position_controller p5_fx2_position_controller pi_g_position_controller l_g_position_controller "/>
+</launch>

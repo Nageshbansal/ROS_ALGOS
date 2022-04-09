@@ -1,0 +1,816 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="ot_lights">
+  <link
+    name="base">
+    <inertial>
+      <origin
+        xyz="-1.9367 0.051046 -0.48949"
+        rpy="0 0 0" />
+      <mass
+        value="0.59308" />
+      <inertia
+        ixx="0.0021857"
+        ixy="-4.1073E-06"
+        ixz="-0.00016634"
+        iyy="0.0012416"
+        iyz="-4.4453E-06"
+        izz="0.0021588" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/base.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/base.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="p1">
+    <inertial>
+      <origin
+        xyz="0.002116 -8.3286E-08 0.065639"
+        rpy="0 0 0" />
+      <mass
+        value="0.036515" />
+      <inertia
+        ixx="8.7543E-05"
+        ixy="4.8946E-11"
+        ixz="-7.2263E-07"
+        iyy="8.9539E-05"
+        iyz="7.2664E-11"
+        izz="1.1438E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p1_base"
+    type="revolute">
+    <origin
+      xyz="-1.9294 0.48153 0.0743"
+      rpy="0 0 2.3111" />
+    <parent
+      link="base" />
+    <child
+      link="p1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.0"
+      upper="0.001"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="p2">
+    <inertial>
+      <origin
+        xyz="2.0539E-15 5.7732E-15 0.35"
+        rpy="0 0 0" />
+      <mass
+        value="0.14074" />
+      <inertia
+        ixx="0.0057651"
+        ixy="-1.0842E-19"
+        ixz="-3.2553E-17"
+        iyy="0.0057651"
+        iyz="-9.3331E-17"
+        izz="3.6171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p2_p1"
+    type="fixed">
+    <origin
+      xyz="0.71934 0 0.075"
+      rpy="-1.5708 -1.3246 1.5708" />
+    <parent
+      link="p1" />
+    <child
+      link="p2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fs1">
+    <inertial>
+      <origin
+        xyz="0.0073925 -0.034067 0.039331"
+        rpy="0 0 0" />
+      <mass
+        value="0.31656" />
+      <inertia
+        ixx="0.00046077"
+        ixy="2.7227E-05"
+        ixz="-1.3344E-06"
+        iyy="0.0003403"
+        iyz="6.1355E-06"
+        izz="0.00022188" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/fs1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/fs1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fs1_p2"
+    type="fixed">
+    <origin
+      xyz="-0.021193 0.0053249 -0.018607"
+      rpy="1.5708 0.21369 1.3246" />
+    <parent
+      link="p2" />
+    <child
+      link="fs1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="p3">
+    <inertial>
+      <origin
+        xyz="0.0015452 5.3916E-09 0.01106"
+        rpy="0 0 0" />
+      <mass
+        value="0.080239" />
+      <inertia
+        ixx="8.5758E-05"
+        ixy="4.518E-12"
+        ixz="-1.1269E-06"
+        iyy="8.8667E-05"
+        iyz="-5.5409E-11"
+        izz="1.7543E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p3_fs1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.132"
+      rpy="3.1416 0 -1.3571" />
+    <parent
+      link="fs1" />
+    <child
+      link="p3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="p4">
+    <inertial>
+      <origin
+        xyz="6.6613E-16 -6.6613E-16 0.25"
+        rpy="0 0 0" />
+      <mass
+        value="0.10053" />
+      <inertia
+        ixx="0.0021073"
+        ixy="-5.9631E-19"
+        ixz="-4.0132E-18"
+        iyy="0.0021073"
+        iyz="2.9346E-17"
+        izz="2.5836E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p4_p3"
+    type="fixed">
+    <origin
+      xyz="0.52 0 0.020149"
+      rpy="-1.5708 -0.2902 1.5708" />
+    <parent
+      link="p3" />
+    <child
+      link="p4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fs2">
+    <inertial>
+      <origin
+        xyz="0.035823 0.0048987 0.11314"
+        rpy="0 0 0" />
+      <mass
+        value="0.30522" />
+      <inertia
+        ixx="0.00020509"
+        ixy="-1.7733E-05"
+        ixz="6.2227E-06"
+        iyy="0.00033265"
+        iyz="8.5425E-07"
+        izz="0.00022147" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/fs2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/fs2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fs2_p4"
+    type="fixed">
+    <origin
+      xyz="-0.035238 0.118 -0.02"
+      rpy="-1.5708 1.4349 -2.8514" />
+    <parent
+      link="p4" />
+    <child
+      link="fs2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="p5">
+    <inertial>
+      <origin
+        xyz="-5.7425E-08 -1.9798E-08 0.013278"
+        rpy="0 0 0" />
+      <mass
+        value="0.017945" />
+      <inertia
+        ixx="6.984E-06"
+        ixy="6.7418E-11"
+        ixz="7.7363E-11"
+        iyy="1.134E-05"
+        iyz="1.985E-11"
+        izz="8.9877E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/p5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p5_fs2"
+    type="revolute">
+    <origin
+      xyz="0 0 0.059"
+      rpy="3.1416 0 0.14171" />
+    <parent
+      link="fs2" />
+    <child
+      link="p5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.0"
+      upper="0.001"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="g">
+    <inertial>
+      <origin
+        xyz="-0.024624 -0.087409 -1.4658E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.99972" />
+      <inertia
+        ixx="0.01001"
+        ixy="8.2488E-07"
+        ixz="1.3832E-08"
+        iyy="0.0073427"
+        iyz="8.9883E-09"
+        izz="0.016987" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/g.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/g.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="g_p5"
+    type="fixed">
+    <origin
+      xyz="-0.025 0 0.02"
+      rpy="-1.5708 0 -3.1416" />
+    <parent
+      link="p5" />
+    <child
+      link="g" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="hold">
+    <inertial>
+      <origin
+        xyz="0.081478 -2.3539E-10 -5.4321E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.11979" />
+      <inertia
+        ixx="4.0756E-05"
+        ixy="6.2834E-13"
+        ixz="4.5777E-15"
+        iyy="8.5021E-05"
+        iyz="2.6988E-06"
+        izz="8.6176E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/hold.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/hold.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="hold_g"
+    type="fixed">
+    <origin
+      xyz="-0.245 0 0"
+      rpy="2.2555 0 -1.5708" />
+    <parent
+      link="g" />
+    <child
+      link="hold" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="pi">
+    <inertial>
+      <origin
+        xyz="-9.0151E-11 -3.1386E-10 0.052279"
+        rpy="0 0 0" />
+      <mass
+        value="0.066369" />
+      <inertia
+        ixx="1.8605E-05"
+        ixy="-1.6387E-14"
+        ixz="1.5924E-13"
+        iyy="1.8605E-05"
+        iyz="-3.1938E-14"
+        izz="2.5445E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/pi.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/pi.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pi_hold"
+    type="revolute">
+    <origin
+      xyz="0.1075 0 0"
+      rpy="-1.5708 -1.1896 -1.5708" />
+    <parent
+      link="hold" />
+    <child
+      link="pi" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.0"
+      upper="0.001"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="cr">
+    <inertial>
+      <origin
+        xyz="-0.00070414 -0.0015086 -0.20472"
+        rpy="0 0 0" />
+      <mass
+        value="5.1146" />
+      <inertia
+        ixx="0.028662"
+        ixy="0.0068533"
+        ixz="-1.3009E-08"
+        iyy="0.040146"
+        iyz="-2.8452E-08"
+        izz="0.026493" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/cr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/cr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cr_pi"
+    type="revolute">
+    <origin
+      xyz="0 0 0.1625"
+      rpy="1.5708 -0.43449 0.50491" />
+    <parent
+      link="pi" />
+    <child
+      link="cr" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.0"
+      upper="0.001"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="cam">
+    <inertial>
+      <origin
+        xyz="4.6672E-06 0 0.013845"
+        rpy="0 0 0" />
+      <mass
+        value="0.089897" />
+      <inertia
+        ixx="1.5652E-05"
+        ixy="7.4454E-19"
+        ixz="-4.4707E-09"
+        iyy="9.5584E-05"
+        iyz="-2.6073E-20"
+        izz="0.00010054" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/cam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://ot_lights/meshes/cam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cam_cr"
+    type="fixed">
+    <origin
+      xyz="-0.0063442 -0.013592 -0.42044"
+      rpy="1.5708 0 2.7049" />
+    <parent
+      link="cr" />
+    <child
+      link="cam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link name="world" />
+  <joint name="ceiling_joint" type="fixed">
+    <origin xyz="2 2 1.5" rpy=" 3.14159 0 0" />
+    <parent link="world" />
+    <child link="base" />
+  </joint>
+  <!-- <transmission name="tran_p1_base">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p1_base">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p1_base">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_p3_fs1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p3_fs1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p3_fs1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_p5_fs2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p5_fs2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p5_fs2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_pi_hold">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pi_hold">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pi_hold">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_cr_pi">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="cr_pi">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_cr_pi">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> -->
+
+  <gazebo reference="cam">
+        <sensor name="camera" type="depth">
+            <update_rate>0.0</update_rate>
+            <visualize>true</visualize>
+            <camera>
+                <horizontal_fov>1.047198</horizontal_fov>
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>3</far>
+                </clip>
+            </camera>
+            <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+                <baseline>0.2</baseline>
+                <alwaysOn>true</alwaysOn>
+               
+                <updateRate>0.0</updateRate>
+                <cameraName>camera_ir</cameraName>
+                <imageTopicName>/camera/color/image_raw</imageTopicName>
+                <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+                <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+                <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+                <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+                <frameName>cam</frameName>
+                <pointCloudCutoff>0.5</pointCloudCutoff>
+                <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+                <distortionK1>0</distortionK1>
+                <distortionK2>0</distortionK2>
+                <distortionK3>0</distortionK3>
+                <distortionT1>0</distortionT1>
+                <distortionT2>0</distortionT2>
+                <CxPrime>0</CxPrime>
+                <Cx>0</Cx>
+                <Cy>0</Cy>
+                <focalLength>0</focalLength>
+                <hackBaseline>0</hackBaseline>
+            </plugin>
+        </sensor>
+  </gazebo>
+ 
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/ot_lights</robotNamespace>
+    </plugin>
+  </gazebo> 
+
+</robot>

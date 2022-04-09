@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="otf">
+  <link
+    name="b">
+    <inertial>
+      <origin
+        xyz="0.0108230167178515 9.27600352705151E-09 -0.0510461125589844"
+        rpy="0 0 0" />
+      <mass
+        value="0.593077727132138" />
+      <inertia
+        ixx="0.00200538179080162"
+        ixy="3.48493771653903E-09"
+        ixz="-6.05424653432736E-06"
+        iyy="0.00233915051923309"
+        iyz="-7.1467407839396E-10"
+        izz="0.00124160566424522" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/b.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/b.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="p1">
+    <inertial>
+      <origin
+        xyz="0.00211622618021025 -4.52844711506674E-08 0.0656387309699442"
+        rpy="0 0 0" />
+      <mass
+        value="0.0365148827381756" />
+      <inertia
+        ixx="8.75427933934605E-05"
+        ixy="2.8909347058332E-11"
+        ixz="-7.22667692463702E-07"
+        iyy="8.95387938844499E-05"
+        iyz="3.70680544504623E-11"
+        izz="1.14378225787831E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p1_b"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.0743"
+      rpy="3.1416 0 0" />
+    <parent
+      link="b" />
+    <child
+      link="p1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="p2">
+    <inertial>
+      <origin
+        xyz="-0.000325816761221259 8.1857460137516E-05 0.0941493404932696"
+        rpy="0 0 0" />
+      <mass
+        value="0.362229191396754" />
+      <inertia
+        ixx="0.00597476663521978"
+        ixy="-2.32943390262284E-06"
+        ixz="6.04575323182545E-06"
+        iyy="0.00596608087269397"
+        iyz="-1.7128273249715E-06"
+        izz="0.000104366948766741" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p2_p1"
+    type="fixed">
+    <origin
+      xyz="0.71934 0 0.075"
+      rpy="-1.5708 -1.3246 1.5708" />
+    <parent
+      link="p1" />
+    <child
+      link="p2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fs1">
+    <inertial>
+      <origin
+        xyz="-3.01460369667161E-07 -3.1819825496715E-07 0.0594837330349332"
+        rpy="0 0 0" />
+      <mass
+        value="0.095072361461563" />
+      <inertia
+        ixx="0.000266239310450197"
+        ixy="5.12057408803769E-11"
+        ixz="-2.45428478945114E-09"
+        iyy="0.000266239345919637"
+        iyz="-3.31630361044051E-09"
+        izz="1.16188586500563E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/fs1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/fs1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fs1_p2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.018607"
+      rpy="1.5708 1.0442 1.3246" />
+    <parent
+      link="p2" />
+    <child
+      link="fs1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="p3">
+    <inertial>
+      <origin
+        xyz="0.00154516873116206 2.23333015237263E-09 0.0110596752348162"
+        rpy="0 0 0" />
+      <mass
+        value="0.080238478316838" />
+      <inertia
+        ixx="8.57585076910375E-05"
+        ixy="1.23908111035887E-11"
+        ixz="-1.12695292778759E-06"
+        iyy="8.86667116101849E-05"
+        iyz="-5.0243694014807E-11"
+        izz="1.75427554147157E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p3_fs1"
+    type="revolute">
+    <origin
+      xyz="0 0 0.11015"
+      rpy="3.1416 0 -0.52661" />
+    <parent
+      link="fs1" />
+    <child
+      link="p3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="p4">
+    <inertial>
+      <origin
+        xyz="0.000108140331570555 -0.000362090118619984 0.0300219831287907"
+        rpy="0 0 0" />
+      <mass
+        value="0.322016805430805" />
+      <inertia
+        ixx="0.00230859781580296"
+        ixy="-2.67628732946519E-06"
+        ixz="-1.83777399315252E-06"
+        iyy="0.00231676034514645"
+        iyz="6.00616085182227E-06"
+        izz="9.39370121971393E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.588235294117647 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p4_p3"
+    type="fixed">
+    <origin
+      xyz="0.52 0 0.020149"
+      rpy="-1.5708 -0.2902 1.5708" />
+    <parent
+      link="p3" />
+    <child
+      link="p4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fs2">
+    <inertial>
+      <origin
+        xyz="2.26682828174951E-07 -4.43239558056696E-07 -0.0379572962453974"
+        rpy="0 0 0" />
+      <mass
+        value="0.0837234282999245" />
+      <inertia
+        ixx="0.000134568693720268"
+        ixy="-3.54902221367105E-11"
+        ixz="-9.45955392595141E-10"
+        iyy="0.000134568782084101"
+        iyz="2.93406398061929E-09"
+        izz="1.12088787441517E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/fs2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/fs2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fs2_p4"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.0200000000000002"
+      rpy="1.5707963267949 0.876203987801579 0.290201760753576" />
+    <parent
+      link="p4" />
+    <child
+      link="fs2" />
+    <axis
+      xyz="-0.640072280782535 -0.768314698137322 0" />
+  </joint>
+  <link
+    name="p5">
+    <inertial>
+      <origin
+        xyz="-5.74248963935986E-08 -1.97742632232382E-08 0.0132778883382069"
+        rpy="0 0 0" />
+      <mass
+        value="0.0179453319684086" />
+      <inertia
+        ixx="6.98401847085854E-06"
+        ixy="6.7418028603697E-11"
+        ixz="7.73625800221767E-11"
+        iyy="1.13398680905365E-05"
+        iyz="1.9850218842681E-11"
+        izz="8.98770774563359E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/p5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="p5_fs2"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.064148533521579"
+      rpy="3.14159265358979 0 -0.694592338993318" />
+    <parent
+      link="fs2" />
+    <child
+      link="p5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="g">
+    <inertial>
+      <origin
+        xyz="-0.0246195093001971 -0.0850273498456152 -1.50385637951443E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.9868423672785" />
+      <inertia
+        ixx="0.0100062619759924"
+        ixy="8.26058732399364E-07"
+        ixz="1.3795482592097E-08"
+        iyy="0.00734091135017044"
+        iyz="9.05059039572444E-09"
+        izz="0.0169853275093895" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/g.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/g.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="g_p5"
+    type="fixed">
+    <origin
+      xyz="-0.0249999999999986 0 0.0199999999999965"
+      rpy="-1.5707963267949 0 3.14159265358979" />
+    <parent
+      link="p5" />
+    <child
+      link="g" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="mh">
+    <inertial>
+      <origin
+        xyz="0.0814784816223914 -2.46862336128473E-10 -7.08988423525625E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.119789198842206" />
+      <inertia
+        ixx="4.07555728965012E-05"
+        ixy="6.22665721635199E-13"
+        ixz="3.70263505138604E-15"
+        iyy="8.50206916250546E-05"
+        iyz="2.69880925773866E-06"
+        izz="8.61759607077169E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/mh.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/mh.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="mh_g"
+    type="fixed">
+    <origin
+      xyz="-0.244999999999999 0 0"
+      rpy="1.41923084369896 0 -1.5707963267949" />
+    <parent
+      link="g" />
+    <child
+      link="mh" />
+    <axis
+      xyz="0 -0.150985853132846 0.988535923552476" />
+  </joint>
+  <link
+    name="pi">
+    <inertial>
+      <origin
+        xyz="-2.91368706939465E-10 -1.16891676893438E-10 0.0522794091600999"
+        rpy="0 0 0" />
+      <mass
+        value="0.066369491057739" />
+      <inertia
+        ixx="1.86048065698488E-05"
+        ixy="-8.30622107417722E-14"
+        ixz="3.22154862363968E-13"
+        iyy="1.860480694282E-05"
+        iyz="-2.10277967151218E-13"
+        izz="2.54451290731992E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/pi.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/pi.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pi_mh"
+    type="revolute">
+    <origin
+      xyz="0.107499999994934 0 0"
+      rpy="1.5707963267949 1.36663932588329 1.5707963267949" />
+    <parent
+      link="mh" />
+    <child
+      link="pi" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="cr">
+    <inertial>
+      <origin
+        xyz="-0.168554978565971 -0.00114959677753279 0.00120134782721076"
+        rpy="0 0 0" />
+      <mass
+        value="5.12100165091973" />
+      <inertia
+        ixx="0.0264949026500212"
+        ixy="-2.18148033311051E-08"
+        ixz="2.24246756598075E-08"
+        iyy="0.0340113595995144"
+        iyz="-0.00893220960009442"
+        izz="0.0347985049620322" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/cr.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.776470588235294 0.756862745098039 0.737254901960784 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/cr.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cr_pi"
+    type="revolute">
+    <origin
+      xyz="0.0358424746890051 -0.00188674996729073 0.16250000000507"
+      rpy="2.37821135654508 0 3.08900113577412" />
+    <parent
+      link="pi" />
+    <child
+      link="cr" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.01"
+      upper="0.01"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="dc">
+    <inertial>
+      <origin
+        xyz="4.3551433496508E-06 -0.00190649786114361 0.0139217307387329"
+        rpy="0 0 0" />
+      <mass
+        value="0.0963335273959794" />
+      <inertia
+        ixx="1.65299218508302E-05"
+        ixy="2.7113116177103E-15"
+        ixz="-4.47185442826483E-09"
+        iyy="9.72802713710577E-05"
+        iyz="6.65432136145592E-19"
+        izz="0.000101418351511815" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/dc.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.647058823529412 0.619607843137255 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://otf/meshes/dc.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="dc_cr"
+    type="fixed">
+    <origin
+      xyz="-0.384545400350199 -0.0103705258204091 0.0108375363532622"
+      rpy="3.14159265358979 -0.763381311038882 1.5707963267949" />
+    <parent
+      link="cr" />
+    <child
+      link="dc" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link name="world" />
+  <joint name="ceiling_joint" type="fixed">
+    <origin xyz="0.5 0.5 1.5" rpy="0 0 0" />
+    <parent link="world" />
+    <child link="b" />
+  </joint>
+    <transmission name="tran_p1_b">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p1_b">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p1_b">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_p3_fs1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p3_fs1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p3_fs1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_p5_fs2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="p5_fs2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_p5_fs2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_pi_mh">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pi_mh">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pi_mh">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+  <transmission name="tran_cr_pi">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="cr_pi">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_cr_pi">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>
+
+  <gazebo reference="dc">
+        <sensor name="camera" type="depth">
+            <update_rate>0.0</update_rate>
+            <visualize>true</visualize>
+            <camera>
+                <horizontal_fov>1.047198</horizontal_fov>
+                <image>
+                    <width>640</width>
+                    <height>480</height>
+                    <format>R8G8B8</format>
+                </image>
+                <clip>
+                    <near>0.05</near>
+                    <far>3</far>
+                </clip>
+            </camera>
+            <plugin name="camera_plugin" filename="libgazebo_ros_openni_kinect.so">
+                <baseline>0.2</baseline>
+                <alwaysOn>true</alwaysOn>
+               
+                <updateRate>0.0</updateRate>
+                <cameraName>camera_ir</cameraName>
+                <imageTopicName>/camera/color/image_raw</imageTopicName>
+                <cameraInfoTopicName>/camera/color/camera_info</cameraInfoTopicName>
+                <depthImageTopicName>/camera/depth/image_raw</depthImageTopicName>
+                <depthImageCameraInfoTopicName>/camera/depth/camera_info</depthImageCameraInfoTopicName>
+                <pointCloudTopicName>/camera/depth/points</pointCloudTopicName>
+                <frameName>dc</frameName>
+                <pointCloudCutoff>0.5</pointCloudCutoff>
+                <pointCloudCutoffMax>3.0</pointCloudCutoffMax>
+                <distortionK1>0</distortionK1>
+                <distortionK2>0</distortionK2>
+                <distortionK3>0</distortionK3>
+                <distortionT1>0</distortionT1>
+                <distortionT2>0</distortionT2>
+                <CxPrime>0</CxPrime>
+                <Cx>0</Cx>
+                <Cy>0</Cy>
+                <focalLength>0</focalLength>
+                <hackBaseline>0</hackBaseline>
+            </plugin>
+        </sensor>
+  </gazebo>
+ 
+
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/otf</robotNamespace>
+    </plugin>
+  </gazebo> 
+</robot>
