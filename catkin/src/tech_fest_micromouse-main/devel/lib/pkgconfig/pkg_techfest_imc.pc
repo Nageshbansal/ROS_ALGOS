@@ -1,0 +1,8 @@
+prefix=/home/nagesh/tech_fest_micromouse-main/devel
+
+Name: pkg_techfest_imc
+Description: Description of pkg_techfest_imc
+Version: 0.0.0
+Cflags: -I/home/nagesh/tech_fest_micromouse-main/devel/include
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs urdf message_runtime

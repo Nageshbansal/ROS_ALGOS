@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->  
+<robot
+  name="ot_model">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-1.9319 0.048235 -0.48431"
+        rpy="0 0 0" />
+      <mass
+        value="0.53942" />
+      <inertia
+        ixx="0.0021749"
+        ixy="-4.1073E-06"
+        ixz="-0.00016657"
+        iyy="0.0012304"
+        iyz="-4.4453E-06"
+        izz="0.002148" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/base_link.STL" />
+        <!-- <cylinder radius="0.0165" length="0.42"/> -->
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="pipe1">
+    <inertial>
+      <origin
+        xyz="0.002116 -8.3286E-08 0.085639"
+        rpy="0 0 0" />
+      <mass
+        value="0.036515" />
+      <inertia
+        ixx="8.7543E-05"
+        ixy="4.8938E-11"
+        ixz="-7.2263E-07"
+        iyy="8.9539E-05"
+        iyz="7.2658E-11"
+        izz="1.1438E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="base_pipe1"
+    type="revolute">
+    <origin
+      xyz="-1.9294 0.48153 0.0543"
+      rpy="0 0 2.3113" />
+    <parent
+      link="base_link" />
+    <child
+      link="pipe1" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="gear1">
+    <inertial>
+      <origin
+        xyz="-6.6327E-12 2.4896E-12 0.00080015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0049482" />
+      <inertia
+        ixx="7.1988E-07"
+        ixy="4.4999E-22"
+        ixz="9.4329E-23"
+        iyy="7.1988E-07"
+        iyz="-2.2089E-22"
+        izz="1.1757E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe1_gear1"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 1.2117" />
+    <parent
+      link="pipe1" />
+    <child
+      link="gear1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pipe2">
+    <inertial>
+      <origin
+        xyz="1.8463E-13 7.2431E-13 0.35"
+        rpy="0 0 0" />
+      <mass
+        value="0.14074" />
+      <inertia
+        ixx="0.0057651"
+        ixy="-9.2157E-19"
+        ixz="2.7889E-15"
+        iyy="0.0057651"
+        iyz="1.1277E-14"
+        izz="3.6171E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe1_pipe2"
+    type="fixed">
+    <origin
+      xyz="0.71934 0 0.095"
+      rpy="-1.5708 -1.3246 1.5708" />
+    <parent
+      link="pipe1" />
+    <child
+      link="pipe2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fixedset1">
+    <inertial>
+      <origin
+        xyz="-0.025184 -1.1049E-07 -0.0015356"
+        rpy="0 0 0" />
+      <mass
+        value="0.25958" />
+      <inertia
+        ixx="0.00032322"
+        ixy="-2.2165E-10"
+        ixz="-6.2789E-06"
+        iyy="0.00045517"
+        iyz="2.8979E-09"
+        izz="0.00021021" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/fixedset1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/fixedset1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe2_fixedset1"
+    type="fixed">
+    <origin
+      xyz="0.019541 -0.0049099 -0.018607"
+      rpy="1.568 -1.5708 -1.8142" />
+    <parent
+      link="pipe2" />
+    <child
+      link="fixedset1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pipe3">
+    <inertial>
+      <origin
+        xyz="0.0015452 5.3889E-09 -0.05494"
+        rpy="0 0 0" />
+      <mass
+        value="0.080239" />
+      <inertia
+        ixx="8.5758E-05"
+        ixy="4.5267E-12"
+        ixz="-1.1269E-06"
+        iyy="8.8667E-05"
+        iyz="-5.5402E-11"
+        izz="1.7543E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixedset1_pipe3"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.024"
+      rpy="0 0 -3.1412" />
+    <parent
+      link="fixedset1" />
+    <child
+      link="pipe3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="gear2">
+    <inertial>
+      <origin
+        xyz="-4.4409E-16 -3.3307E-16 0.00080015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0049482" />
+      <inertia
+        ixx="7.1988E-07"
+        ixy="4.7646E-22"
+        ixz="-2.9163E-22"
+        iyy="7.1988E-07"
+        iyz="-6.6404E-22"
+        izz="1.1757E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe3_gear2"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 2.8353" />
+    <parent
+      link="pipe3" />
+    <child
+      link="gear2" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="pipe4">
+    <inertial>
+      <origin
+        xyz="3.5527E-15 1.6931E-15 0.25"
+        rpy="0 0 0" />
+      <mass
+        value="0.10053" />
+      <inertia
+        ixx="0.0021073"
+        ixy="-3.5237E-19"
+        ixz="-2.6394E-17"
+        iyy="0.0021073"
+        iyz="-1.2634E-17"
+        izz="2.5836E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.58824 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe3_pipe4"
+    type="fixed">
+    <origin
+      xyz="0.52 0 -0.045851"
+      rpy="-1.5708 -0.2902 1.5708" />
+    <parent
+      link="pipe3" />
+    <child
+      link="pipe4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fixedset2">
+    <inertial>
+      <origin
+        xyz="0.012423 0.022975 -0.012419"
+        rpy="0 0 0" />
+      <mass
+        value="0.25029" />
+      <inertia
+        ixx="0.00029389"
+        ixy="-5.5206E-05"
+        ixz="2.9847E-06"
+        iyy="0.00022164"
+        iyz="5.5266E-06"
+        izz="0.00021029" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/fixedset2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/fixedset2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe4_fixedset2"
+    type="fixed">
+    <origin
+      xyz="0 0 -0.02"
+      rpy="-1.5708 0.49569 -2.8514" />
+    <parent
+      link="pipe4" />
+    <child
+      link="fixedset2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="pipe5">
+    <inertial>
+      <origin
+        xyz="-5.7425E-08 -1.9798E-08 0.033278"
+        rpy="0 0 0" />
+      <mass
+        value="0.017945" />
+      <inertia
+        ixx="6.984E-06"
+        ixy="6.7418E-11"
+        ixz="7.7363E-11"
+        iyy="1.134E-05"
+        iyz="1.985E-11"
+        izz="8.9877E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe5.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pipe5.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fixedset2_pipe5"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.044149"
+      rpy="3.1416 0 1.0807" />
+    <parent
+      link="fixedset2" />
+    <child
+      link="pipe5" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="gear3">
+    <inertial>
+      <origin
+        xyz="2.2204E-16 0 0.00080015"
+        rpy="0 0 0" />
+      <mass
+        value="0.0049482" />
+      <inertia
+        ixx="7.1988E-07"
+        ixy="-8.6523E-22"
+        ixz="1.0427E-22"
+        iyy="7.1988E-07"
+        iyz="-1.2599E-21"
+        izz="1.1757E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gear3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe5_gear3"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="3.1416 0 -0.71066" />
+    <parent
+      link="pipe5" />
+    <child
+      link="gear3" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="gimbal">
+    <inertial>
+      <origin
+        xyz="-0.0018248 -0.10577 2.455E-07"
+        rpy="0 0 0" />
+      <mass
+        value="1.1121" />
+      <inertia
+        ixx="0.010599"
+        ixy="1.7429E-05"
+        ixz="1.3832E-08"
+        iyy="0.0074451"
+        iyz="1.3488E-08"
+        izz="0.017492" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gimbal.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/gimbal.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pipe5_gimbal"
+    type="fixed">
+    <origin
+      xyz="-0.025 0 0.04"
+      rpy="-1.5708 0 -3.1416" />
+    <parent
+      link="pipe5" />
+    <child
+      link="gimbal" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="motorholder">
+    <inertial>
+      <origin
+        xyz="0.074036 1.5995E-10 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.069394" />
+      <inertia
+        ixx="3.0567E-05"
+        ixy="3.5192E-13"
+        ixz="-6.305E-22"
+        iyy="7.4186E-05"
+        iyz="2.5797E-06"
+        izz="7.6647E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/motorholder.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/motorholder.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gimbal_motorholder"
+    type="fixed">
+    <origin
+      xyz="-0.245 0 0"
+      rpy="2.2555 0 -1.5708" />
+    <parent
+      link="gimbal" />
+    <child
+      link="motorholder" />
+    <axis
+      xyz="-1 0 0" />
+  </joint>
+  <link
+    name="pinion">
+    <inertial>
+      <origin
+        xyz="0.026639 6.9612E-11 -2.7992E-10"
+        rpy="0 0 0" />
+      <mass
+        value="0.061916" />
+      <inertia
+        ixx="2.5323E-05"
+        ixy="-1.1125E-13"
+        ixz="-6.1651E-14"
+        iyy="1.7943E-05"
+        iyz="-1.0817E-13"
+        izz="1.7943E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pinion.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/pinion.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="motorholder_pinion"
+    type="revolute">
+    <origin
+      xyz="0.135 0 0"
+      rpy="2.4286 0 0" />
+    <parent
+      link="motorholder" />
+    <child
+      link="pinion" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+  <link
+    name="crown">
+    <inertial>
+      <origin
+        xyz="0.0041166 -9.3811E-10 1.6122E-09"
+        rpy="0 0 0" />
+      <mass
+        value="0.39289" />
+      <inertia
+        ixx="0.0026625"
+        ixy="9.596E-12"
+        ixz="-3.411E-12"
+        iyy="0.001338"
+        iyz="3.6199E-11"
+        izz="0.001338" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/crown.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.77647 0.75686 0.73725 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/crown.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="pinion_crown"
+    type="fixed">
+    <origin
+      xyz="0.135 -0.0010128 0.035878"
+      rpy="-2.3474 1.5426 1.5708" />
+    <parent
+      link="pinion" />
+    <child
+      link="crown" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="light">
+    <inertial>
+      <origin
+        xyz="3.5214E-06 1.3401E-08 -0.056305"
+        rpy="0 0 0" />
+      <mass
+        value="4.6914" />
+      <inertia
+        ixx="0.023829"
+        ixy="2.477E-10"
+        ixz="-3.1295E-08"
+        iyy="0.024114"
+        iyz="-2.1737E-10"
+        izz="0.041996" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/light.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.64706 0.61961 0.6 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/light.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="crown_light"
+    type="fixed">
+    <origin
+      xyz="-0.18385 0.037673 -0.039369"
+      rpy="-2.3782 0 0" />
+    <parent
+      link="crown" />
+    <child
+      link="light" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="linkconnect">
+    <inertial>
+      <origin
+        xyz="4.4409E-16 5.5511E-17 0.048212"
+        rpy="0 0 0" />
+      <mass
+        value="0.021991" />
+      <inertia
+        ixx="9.5295E-06"
+        ixy="7.4115E-22"
+        ixz="3.9546E-20"
+        iyy="9.5295E-06"
+        iyz="-3.3683E-20"
+        izz="1.0996E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/linkconnect.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://OTEditedwithCam-URDF/meshes/linkconnect.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="gimbal_linkconnect"
+    type="revolute">
+    <origin
+      xyz="-0.17473 -0.27 0"
+      rpy="1.5708 1.1363 -1.5708" />
+    <parent
+      link="gimbal" />
+    <child
+      link="linkconnect" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-5"
+      upper="5"
+      effort="100"
+      velocity="0" />
+  </joint>
+
+  <link name="world" />
+  <joint name="ceiling_joint" type="fixed">
+    <origin xyz="2 2 1.5" rpy=" 3.14159 0 0" />
+    <parent link="world" />
+    <child link="base_link" />
+  </joint>
+  <transmission name="tran_base_pipe1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="base_pipe1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_base_pipe1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+              
+  <!-- <transmission name="tran_pipe1_gear1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe1_gear1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe1_gear1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_pipe1_pipe2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe1_pipe2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe1_pipe2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_pipe2_fixedset1">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe2_fixedset1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe2_fixedset1">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <transmission name="tran_fixedset1_pipe3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fixedset1_pipe3">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_fixedset1_pipe3">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+              
+  <!-- <transmission name="tran_pipe3_gear2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe3_gear2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe3_gear2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_pipe3_pipe4">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe3_pipe4">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe3_pipe4">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_pipe4_fixedset2">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe4_fixedset2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe4_fixedset2">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <transmission name="tran_fixedset2_pipe5">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="fixedset2_pipe5">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_fixedset2_pipe5">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+              
+  <!-- <transmission name="tran_pipe5_gear3">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe5_gear3">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe5_gear3">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_pipe5_gimbal">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pipe5_gimbal">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pipe5_gimbal">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+               -->
+  <!-- <transmission name="tran_gimbal_motorholder">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="gimbal_motorholder">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_gimbal_motorholder">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <transmission name="tran_motorholder_pinion">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="motorholder_pinion">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_motorholder_pinion">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+              
+  <!-- <transmission name="tran_pinion_crown">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="pinion_crown">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_pinion_crown">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+              
+  <!-- <transmission name="tran_crown_light">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="crown_light">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_crown_light">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission>  -->
+
+  <transmission name="tran_gimbal_linkconnect">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="gimbal_linkconnect">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="act_gimbal_linkconnect">
+          <hardwareInterface>EffortJointInterface</hardwareInterface>
+          <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+  </transmission> 
+            
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <robotNamespace>/ot_model</robotNamespace>
+    </plugin>
+  </gazebo>
+    
+</robot>

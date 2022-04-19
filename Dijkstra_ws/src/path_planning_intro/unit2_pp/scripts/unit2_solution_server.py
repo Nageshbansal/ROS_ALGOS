@@ -27,6 +27,9 @@ def make_plan(req):
   height = req.height
   start_index = req.start
   goal_index = req.goal
+  print("="*100)
+  print(goal_index)
+  print("="*100)
   # side of each grid map square in meters
   resolution = 0.2
   # origin of grid map

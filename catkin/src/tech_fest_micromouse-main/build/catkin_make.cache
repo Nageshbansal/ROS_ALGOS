@@ -1,0 +1,2 @@
+pkg_tf_micromouse
+-DCATKIN_DEVEL_PREFIX=/home/nagesh/tech_fest_micromouse-main/devel -DCMAKE_INSTALL_PREFIX=/home/nagesh/tech_fest_micromouse-main/install -G Unix Makefiles

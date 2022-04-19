@@ -1,0 +1,27 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/nagesh/Dijkstra_ws/devel/include/**",
+        "/home/nagesh/catkin_ws/devel/include/**",
+        "/opt/ros/melodic/include/**",
+        "/home/nagesh/catkin_ws/src/learning_tf/include/**",
+        "/home/nagesh/catkin_ws/src/robot_setup_tf/include/**",
+        "/home/nagesh/catkin_ws/src/ros_essentials_cpp/include/**",
+        "/home/nagesh/catkin_ws/src/rosserial/rosserial_server/include/**",
+        "/home/nagesh/catkin_ws/src/rosserial/rosserial_test/include/**",
+        "/home/nagesh/rotf_ws/src/rotf/include/**",
+        "/home/nagesh/Dijkstra_ws/src/path_planning_intro/srv_client_plugin/include/**",
+        "/home/nagesh/catkin_ws/src/turtlebot3_simulations-melodic-devel/turtlebot3_fake/include/**",
+        "/home/nagesh/catkin_ws/src/turtlebot3_simulations-melodic-devel/turtlebot3_gazebo/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS"
+    }
+  ],
+  "version": 4
+}

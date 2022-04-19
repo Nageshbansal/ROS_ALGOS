@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "./src",
+        "./src",
+        "./src",
+        "./src",
+        "./src",
+        "./src/my_robot_driver"
+    ]
+}

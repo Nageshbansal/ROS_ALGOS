@@ -1,0 +1,35 @@
+<launch>
+
+  <!-- <include
+    file="$(find gazebo_ros)/launch/empty_world.launch" /> -->
+  
+
+  <param
+    name="robot_description"
+    textfile="$(find OTEditedwithCam-URDF)/urdf/OTEditedwithCam-URDF.urdf" />
+  <!-- <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_footprint base_link 100" /> -->
+   <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" />
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher"/>
+  <rosparam file="$(find OTEditedwithCam-URDF)/config/joint_names_OTEditedwithCam-URDF.yaml" command="load"/>
+  <!-- <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find OTEditedwithCam-URDF)/urdf/OTEditedwithCam-URDF.urdf -urdf -model OTEditedwithCam-URDF"
+    output="screen" /> -->
+  
+  <node
+  name="fake_joint_calibration"
+  pkg="rostopic"
+  type="rostopic"
+  args="pub /calibrated std_msgs/Bool true" />
+  <node name="controller_spawner"  pkg="controller_manager" type="spawner" ns="/ot_model" respawn="false" output="screen"  args="base_pipe1_position_controller joint_state_controller fixedset1_pipe3_position_controller fixedset2_pipe5_position_controller motorholder_pinion_position_controller gimbal_linkconnect_position_controller "/>
+</launch>
